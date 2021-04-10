@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Piedra&family=Roboto:wght@300;400;500;700;900&family=Sacramento&family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Nunito:wght@300;400;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "nunito", sans-serif;
+}
+
+html body input:-webkit-autofill,
+html body input:-webkit-autofill:hover,
+html body input:-webkit-autofill:focus,
+html body input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px white inset !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAFE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #460B5B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #460B5B;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-bottom: 30px;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  z-index: 100000;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 90px;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.7);
+  position: sticky;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(6px);
+}
+
+header .nav-logo h1 {
+  font-family: 'Tangerine', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  color: #11030E;
+}
+
+header .nav-items {
+  display: flex;
+}
+
+header .nav-items .nav--item {
+  margin-right: 30px;
+}
+
+header .nav-items .nav--item a {
+  color: #11030E;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  font-family: 'montserrat',sans-serif;
+}
+
+header .hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  display: none;
+}
+
+header .hamburger--active .hamburger--bar:nth-child(1) {
+  margin: 0;
+  width: 30px;
+  position: absolute;
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+
+header .hamburger--active .hamburger--bar:nth-child(2) {
+  margin: 0;
+  width: 30px;
+  position: absolute;
+  transform: rotate(-45deg);
+  transition: transform .2s ease;
+}
+
+header .hamburger--bar {
+  height: 1px;
+  width: 40px;
+  background-color: black;
+  margin-bottom: 6px;
+}
+
+header .hamburger--bar:nth-child(2) {
+  width: 30px;
+}
+
+header .mobile-nav {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: none;
+}
+
+header .mobile-nav-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5%;
+  margin-top: 40%;
+}
+
+header .mobile-nav-item {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 1% 3%;
+  border-radius: 6px;
+}
+
+header .mobile-nav-item a {
+  color: #11030E;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+header .mobile-nav--active {
+  display: flex;
+  animation-name: view;
+  animation-duration: 1s;
+  transition: all 1s ease-in;
+}
+
+@keyframes view {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+header .header-content {
+  padding: 0 5% 0 8%;
+  display: flex;
+}
+
+header .header-content--text {
+  width: 50%;
+}
+
+header .header-content--text h1 {
+  margin-top: 120px;
+  margin-bottom: 10px;
+  font-size: 2.2em;
+  line-height: 1.4em;
+}
+
+header .header-content--text h1 span {
+  color: #460B5B;
+}
+
+header .header-content--text p {
+  font-size: 1em;
+  line-height: 1.8em;
+  color: #11030E;
+}
+
+header .header-content--text .cta {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: 0;
+  background-color: #460B5B;
+  color: #FAFAFE;
+  padding: 0 4%;
+  font-family: 'montserrat',sans-serif;
+  margin-top: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .header-content--svg {
+  width: 50%;
+  margin-right: 30px;
+  margin-top: 60px;
+}
+
+header img {
+  width: 100%;
+}
+
+header .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+section.services {
+  margin-top: 1em;
+  display: flex;
+  padding: 0 5% 0 8%;
+}
+
+section.services .services-text {
+  margin-top: 100px;
+  width: 30%;
+}
+
+section.services .services-text h1 {
+  color: #460B5B;
+  font-size: 3em;
+  font-weight: bolder;
+  font-family: "nunito", sans-serif;
+}
+
+section.services .services-items {
+  width: 70%;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    padding-bottom: 70px;
+  }
+  header .nav-logo h1 {
+    font-family: 'Tangerine', sans-serif;
+    font-weight: 400;
+    font-size: 1.8em;
+    color: #11030E;
+  }
+  header .nav-items {
+    display: none;
+  }
+  header .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  header .header-content--text {
+    width: 50%;
+  }
+  header .header-content--text h1 {
+    margin-top: 120px;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    line-height: 1.4em;
+  }
+  header .header-content--text h1 span {
+    color: #460B5B;
+  }
+  header .header-content--text p {
+    font-size: 0.78em;
+    line-height: 1.8em;
+    color: #11030E;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header {
+    padding-bottom: 60px;
+  }
+  header .header-content--text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  header .header-content--text h1 {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    line-height: 1.4em;
+  }
+  header .header-content--text h1 span {
+    color: #460B5B;
+  }
+  header .header-content--text p {
+    font-size: 0.78em;
+    line-height: 1.8em;
+    color: #11030E;
+  }
+  header .header-content--text .cta {
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 0;
+    background-color: #460B5B;
+    color: #FAFAFE;
+    padding: 0 6%;
+    font-family: 'montserrat',sans-serif;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+  }
+  header .header-content--svg {
+    width: 50%;
+    margin-right: 30px;
+    margin-top: 60px;
+    display: none;
+  }
+}

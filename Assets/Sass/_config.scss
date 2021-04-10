@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Piedra&family=Roboto:wght@300;400;500;700;900&family=Sacramento&family=Tangerine:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Nunito:wght@300;400;600;700&display=swap');
+
+
+$light: #FAFAFE;
+$dark: #11030E;
+$primary-color: #460B5B;
+$secondary-color: #413C85;
+
+//set default font
+$default-font: 'nunito', sans-serif;
+
+// reset css
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// set height and no horizontal scroll
+html body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $default-font;
+
+  //remove form autofill background color
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px white inset !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  } 
+}
+
+
+// customize scrollbar 
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 5px;
+}
+
+  // Track 
+::-webkit-scrollbar-track {
+  background: $light; 
+}
+ 
+  // Handle
+::-webkit-scrollbar-thumb {
+  background: $primary-color; 
+}
+
+  // Handle hover
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color; 
+}
+
+
+// default tag styles
+
+
+a {
+  text-decoration: none;
+}
+
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+
+}
+
+
+//set text color function
+
+@function set-text-color($bg) {
+  @if (lightness($bg) > 70) {
+    @return #383e56;
+  } @else {
+     @return #eedad1;
+  }
+}
+
+// set text color based on background mixin
+
+@mixin set-background($bg-color) {
+  background-color: $bg-color;
+  color: set-text-color($bg-color);
+}
