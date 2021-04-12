@@ -67,7 +67,7 @@ header nav {
   height: 90px;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.7);
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   backdrop-filter: blur(6px);
@@ -243,8 +243,9 @@ header .wave {
 section.services {
   margin-top: 1em;
   display: flex;
-  padding: 0 3% 0 8%;
+  padding: 0 3% 5% 8%;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 section.services .services-text {
@@ -292,6 +293,83 @@ section.services .services-items .service-card p {
   font-size: 0.75em;
 }
 
+section.testimonials {
+  background-color: #f5f5f5;
+  padding: 5% 8%;
+  position: relative;
+  height: 600px;
+}
+
+section.testimonials .testimonials-title {
+  width: 100%;
+}
+
+section.testimonials .testimonials-title h1 {
+  color: #460B5B;
+  font-size: 2.5em;
+}
+
+section.testimonials .blob {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 100px;
+  left: 0;
+  margin-left: -100px;
+  z-index: 1;
+  background-color: #ACD2D8;
+}
+
+section.testimonials .blob2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 200px;
+  right: 0;
+  margin-right: -100px;
+  z-index: 1;
+  background-color: #D4F4DD;
+}
+
+section.testimonials .testimonies {
+  width: 100%;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: minmax(auto, 1fr);
+  grid-auto-flow: dense;
+  grid-gap: 20px;
+  overflow-x: scroll;
+}
+
+section.testimonials .testimonies .testimony {
+  z-index: 1000;
+  background-color: #ACD2D8;
+}
+
+section.testimonials .testimonies img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+section.testimonials .testimonies .testifier-details {
+  display: flex;
+}
+
+section.testimonials .testimonies .testifier-details h1 {
+  margin: 0;
+  color: #11030E;
+}
+
+section.testimonials .testimonies .testifier-details small {
+  font-size: 0.65em;
+  color: #460B5B;
+}
+
 @media screen and (max-width: 800px) {
   header {
     padding-bottom: 70px;
@@ -329,7 +407,7 @@ section.services .services-items .service-card p {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) and (max-width: 650px) {
   header {
     padding-bottom: 60px;
   }
@@ -374,5 +452,95 @@ section.services .services-items .service-card p {
     margin-right: 30px;
     margin-top: 60px;
     display: none;
+  }
+  section.services {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 0 8% 0 8%;
+    align-items: center;
+    overflow: hidden;
+  }
+  section.services .services-text {
+    margin-top: 100px;
+    width: 50%;
+  }
+  section.services .services-text h1 {
+    color: #460B5B;
+    font-size: 3em;
+    font-weight: bolder;
+    font-family: "nunito", sans-serif;
+  }
+  section.services .services-text p {
+    font-size: 0.75em;
+  }
+  section.services .services-items {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0 2%;
+  }
+  section.services .services-items .service-card {
+    padding: 20px 30px;
+    max-width: 250px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+  section.services .services-items .service-card h1 {
+    color: #460B5B;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    line-height: 1.3em;
+  }
+  section.services .services-items .service-card p {
+    font-size: 0.75em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section.services .services-text {
+    margin-top: 100px;
+    width: 90%;
+    text-align: center;
+  }
+  section.services .services-text h1 {
+    color: #460B5B;
+    font-size: 3em;
+    font-weight: bolder;
+    font-family: "nunito", sans-serif;
+  }
+  section.services .services-text p {
+    font-size: 0.75em;
+  }
+  section.services .services-items {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    padding: 0 4%;
+  }
+  section.services .services-items .service-card {
+    padding: 20px 30px;
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+  section.services .services-items .service-card h1 {
+    color: #460B5B;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    line-height: 1.3em;
+  }
+  section.services .services-items .service-card p {
+    font-size: 0.85em;
   }
 }

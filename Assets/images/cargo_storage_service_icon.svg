@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="60" viewBox="0 0 80 60">
   <g id="Group_3849" data-name="Group 3849" transform="translate(-162 -2099)">
-    <rect id="Rectangle_201" data-name="Rectangle 201" width="80" height="60" rx="8" transform="translate(162 2099)" fill="rgba(255,80,0,0.1)"/>
+    <rect id="Rectangle_201" data-name="Rectangle 201" width="80" height="60" rx="8" transform="translate(162 2099)" fill="#f5f5f5"/>
     <g id="container_1_" data-name="container (1)" transform="translate(181 2108)">
-      <path id="Path_12182" data-name="Path 12182" d="M23.708,10.937a3.642,3.642,0,0,0,.881-2.36,3.684,3.684,0,0,0-2.451-3.467V2.451h2.451V0H17.237V2.451h2.451v4.9h1.225a1.225,1.225,0,1,1-1.225,1.225H17.237a3.642,3.642,0,0,0,.881,2.36l-12.2,6.218H0V41.827H41.827V17.155H35.912Zm-2.8,1.316h0l9.606,4.9H11.307ZM7.434,36.925H4.983V22.057H7.434Zm7.352,0H12.336V22.057h2.451Zm7.352,0H19.688V22.057h2.451Zm7.352,0H27.04V22.057h2.451Zm7.352,0H34.393V22.057h2.451Z" fill="#ff5000"/>
+      <path id="Path_12182" data-name="Path 12182" d="M23.708,10.937a3.642,3.642,0,0,0,.881-2.36,3.684,3.684,0,0,0-2.451-3.467V2.451h2.451V0H17.237V2.451h2.451v4.9h1.225a1.225,1.225,0,1,1-1.225,1.225H17.237a3.642,3.642,0,0,0,.881,2.36l-12.2,6.218H0V41.827H41.827V17.155H35.912Zm-2.8,1.316h0l9.606,4.9H11.307ZM7.434,36.925H4.983V22.057H7.434Zm7.352,0H12.336V22.057h2.451Zm7.352,0H19.688V22.057h2.451Zm7.352,0H27.04V22.057h2.451Zm7.352,0H34.393V22.057h2.451Z" fill="#460B5B"/>
     </g>
   </g>
 </svg>

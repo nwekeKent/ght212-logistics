@@ -44,7 +44,7 @@
             }
     }
         }
-}
+      
 
 @media screen and (max-width:650px) {
         header 
@@ -103,4 +103,124 @@
             }
 
         }
+        section.services {
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
+            padding: 0 8% 0 8%;
+            align-items: center;
+            overflow: hidden;
+           
+            .services-text {
+                margin-top: 100px;
+                width: 50%;
+                
+    
+                h1 {
+                    color: $primary-color;
+                    font-size: 3em;
+                    font-weight: bolder;
+                    font-family: $default-font;
+                }
+                p {
+                    font-size: 0.75em;
+                }
+            }
+    
+            .services-items {
+                margin-top: 20px;
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+                padding: 0 2%;
+              
+               
+               
+    
+                .service-card {
+                 padding: 20px 30px;
+                 max-width: 250px;
+                  height: auto;
+                  display: grid;
+                  grid-template-columns: 1fr;
+                  grid-gap: 5px;
+               
+                  
+                 
+    
+                  h1 {
+                      color: $primary-color;
+                      font-size: 1.3em;
+                      margin-bottom:10px ;
+                      line-height: 1.3em;
+                  }
+                  p {
+                    font-size: 0.75em;
+                  }
+                }
+            }
+    }
+}
+}
+
+@media screen and (max-width: 500px) {
+    section.services {
+        .services-text {
+            margin-top: 100px;
+            width: 90%;
+            text-align: center;
+            
+
+            h1 {
+                color: $primary-color;
+                font-size: 3em;
+                font-weight: bolder;
+                font-family: $default-font;
+            }
+            p {
+                font-size: 0.75em;
+            }
+        }
+       
+       
+       
+        .services-items {
+            margin-top: 20px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 10px;
+            padding: 0 4%;
+          
+           
+           
+    
+            .service-card {
+                padding: 20px 30px;
+                max-width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 5px;
+                
+           
+              
+             
+    
+              h1 {
+                  color: $primary-color;
+                  font-size: 1.2em;
+                  margin-bottom:10px ;
+                  line-height: 1.3em;
+              }
+              p {
+                font-size: 0.85em;
+              }
+            }
+        }
+    }
+   
 }
