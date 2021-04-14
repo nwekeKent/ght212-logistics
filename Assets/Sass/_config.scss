@@ -44,12 +44,13 @@ html body {
 
   // Track 
 ::-webkit-scrollbar-track {
-  background: $light; 
+  background: #f5f5f5; 
 }
  
   // Handle
 ::-webkit-scrollbar-thumb {
   background: $primary-color; 
+ 
 }
 
   // Handle hover
